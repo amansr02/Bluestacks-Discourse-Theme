@@ -1,5 +1,6 @@
 <script type="text/x-handlebars" data-template-name="components/categories-boxes-with-topics">
 {{#each categories as |c|}}
+{{#if c.uploaded_logo.url}}
   <div data-notification-level={{c.notificationLevelString}} style={{unless noCategoryStyle (border-color c.color)}} class="category category-box category-box-{{c.slug}} {{if c.isMuted "muted"}} {{if noCategoryStyle "no-category-boxes-style"}}">
     <div class="category-box-inner">
       <div class="category-box-heading">
@@ -18,6 +19,7 @@
       </div>
     </div>
   </div>
+  {{/if}}
 {{/each}}
 </script>
 
@@ -94,4 +96,4 @@
     </div>
   </div>
 {{/each}}
-</script>
+</script>2
