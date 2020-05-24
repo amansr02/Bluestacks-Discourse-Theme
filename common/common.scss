@@ -1,25 +1,5 @@
 @import "common/foundation/variables";
 
-.glow {
-  font-family: Helvetica;
-  font-size: 60px;
-  color: #fff;
-  text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #7300e6, 0 0 40px #7300e6, 0 0 50px #7300e6, 0 0 60px #7300e6, 0 0 70px #7300e6;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #8e4dff, 0 0 40px #8e4dff, 0 0 50px #8e4dff, 0 0 60px #8e4dff, 0 0 70px #8e4dff, 0 0 80px #8e4dff;
-  }
-}
-
 .sidebar {
   background: $secondary-high;
   padding: 0 1em;
