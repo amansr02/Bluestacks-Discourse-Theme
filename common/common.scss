@@ -110,7 +110,7 @@
 
     @supports (--custom: property) {
       .logo.aspect-image img {
-        --height: 40px;
+        --height: 100px;
         height: var(--height);
         width: calc(var(--height) * var(--aspect-ratio));
         max-width: 100%;
