@@ -1,7 +1,8 @@
+
 <script type="text/x-handlebars" data-template-name="components/categories-boxes-with-topics">
 {{#each categories as |c|}}
 {{#if c.uploaded_logo.url}}
-  <div data-notification-level={{c.notificationLevelString}} style={{unless noCategoryStyle (border-color c.color)}} class="category category-box category-box-{{c.slug}} {{if c.isMuted "muted"}} {{if noCategoryStyle "no-category-boxes-style"}}">
+  <div data-notification-level={{c.notificationLevelString}} class="category category-box category-box-{{c.slug}} {{if c.isMuted "muted"}} {{if noCategoryStyle "no-category-boxes-style"}}">
     <div class="category-box-inner">
       <div class="category-box-heading">
       {{#unless c.isMuted}}
@@ -25,7 +26,7 @@
 
 <script type="text/x-handlebars" data-template-name="components/categories-boxes">
     {{#each categories as |c|}}
-    <div style={{unless noCategoryStyle (border-color c.color)}} data-category-id={{c.id}} data-notification-level={{c.notificationLevelString}} data-url={{c.url}} class="category category-box category-box-{{c.slug}} {{if c.isMuted "muted"}} {{if noCategoryStyle "no-category-boxes-style"}}">
+    <div data-category-id={{c.id}} data-notification-level={{c.notificationLevelString}} data-url={{c.url}} class="category category-box category-box-{{c.slug}} {{if c.isMuted "muted"}} {{if noCategoryStyle "no-category-boxes-style"}}">
     <div class="category-box-inner">
       {{#unless c.isMuted}}
         <div class="category-logo">
@@ -57,7 +58,7 @@
           </div>
           {{#if c.isGrandParent}}
             {{#each c.subcategories as |subcategory|}}
-              <div data-category-id={{subcategory.id}} data-notification-level={{subcategory.notificationLevelString}} style={{border-color subcategory.color}} class="subcategory with-subcategories {{if subcategory.uploaded_logo.url "has-logo" "no-logo"}}">
+              <div data-category-id={{subcategory.id}} data-notification-level={{subcategory.notificationLevelString}} class="subcategory with-subcategories {{if subcategory.uploaded_logo.url "has-logo" "no-logo"}}">
                 <div class="subcategory-box-inner">
                   {{category-title-link tagName="h4" category=subcategory}}
                   {{#if subcategory.subcategories}}
@@ -96,4 +97,4 @@
     </div>
   </div>
 {{/each}}
-</script>2
+</script>
