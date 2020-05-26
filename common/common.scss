@@ -1,5 +1,10 @@
-
 @import "common/foundation/variables";
+
+.category-title-header {
+  &.category-banner-brawl-stars {
+        background-image:url(https://cdn-www.bluestacks.com/bs-images/Raid-Shadow-Legends-12.jpg); 
+    }
+}
 
 .glow {
   font-family: Helvetica;
